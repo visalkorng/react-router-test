@@ -1,5 +1,5 @@
 # Build with NODE
-FROM node:latest as build
+FROM node:15.4.0 as build
 WORKDIR /app
 COPY ./ ./
 RUN npm install
