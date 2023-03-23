@@ -2,7 +2,7 @@
 FROM node:15.4.0 as build
 WORKDIR /app
 COPY ./ ./
-RUN npm install
+RUN npm install --force
 RUN npm run build
 
 # Deploy on NGINX
