@@ -28,16 +28,16 @@ pipeline{
                 
                 script{
                     docker.withRegistry('', 'dockerhub-auth') {
-                        def customImage = docker.build("xeng/simple-route:${BUILD_NUMBER}")
+                        def customImage = docker.build("xeng/react-router:${BUILD_NUMBER}")
                         /* Push the container to the custom Registry */
                         customImage.push()
                     }
                 }
                 sh 'docker logout'
 
-                //Trigger to build other job => Get value: "${params.BUILD_NUM}"
+                //Trigger to build other job => Get value: "${params.VERSION}"
                 build job: 'frontend-argocd', parameters: [
-                    string(name: 'BUILD_NUM', value: "${BUILD_NUMBER}")
+                    string(name: 'VERSION', value: "${BUILD_NUMBER}")
                 ]
             }
         }
