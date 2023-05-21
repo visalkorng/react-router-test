@@ -2,6 +2,6 @@ version: "3.8"
 services:
   reactjs-ui:
     container_name: "reactjs-ui-cont"
-    build: .
+    image: xeng/reactjs-VV1:1.2.3
     ports:
       - "3001:80"
