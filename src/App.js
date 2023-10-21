@@ -10,7 +10,7 @@ function App() {
       <Router>
         <ul>
           <li>
-            <Link to="/">To Visalll</Link>
+            <Link to="/">To Visall</Link>
           </li>
           <li>
             <Link to="/profile">To Profile</Link>
