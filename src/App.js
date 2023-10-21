@@ -13,7 +13,7 @@ function App() {
             <Link to="/">To Visall</Link>
           </li>
           <li>
-            <Link to="/profile">To Profile</Link>
+            <Link to="/profile">To Profile visal</Link>
           </li>
           <li>
             <Link to="/profile/andrew" exact>To Andrew's Profile</Link>
